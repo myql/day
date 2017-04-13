@@ -38,7 +38,7 @@ function playDate(){
 	setDays();
 	for(i=setWeek;j<=setMonthDays[setDate.getMonth()];i++)
 	{
-		dayList[i].text=j;
+		dayList[i].innerHTML=j;
 		j++;
 	}
 
@@ -58,3 +58,8 @@ function setDays(){
 	}
 }
 playDate();
+function playMonthPre(){
+	var setDate=new Date();
+	setDate.setFullYear(nowYear-1);
+	var setYear=setDate.getFullYear();
+}

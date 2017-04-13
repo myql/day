@@ -28,9 +28,10 @@ var nowYear=nowDate.getFullYear();
 var nowWeek=nowDate.getDay();
 var nowDay=nowDate.getDate();
 
-function playDate(){
+function playDate(year,month){
 	var setDate=new Date();
-	setDate.setMonth(2);
+	setDate.setMonth(year);
+	setDate.setMonth(month);
 	setDate.setDate(1);
 	var setDay=setDate.getDate();
 	var setWeek=setDate.getDay();
@@ -60,6 +61,7 @@ function setDays(){
 playDate();
 function playMonthPre(){
 	var setDate=new Date();
-	setDate.setFullYear(nowYear-1);
-	var setYear=setDate.getFullYear();
+	setDate.setMonth(nowMonth-1);
+	
+	
 }

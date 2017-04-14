@@ -12,6 +12,10 @@ li {
 	margin: 20px auto;
 	cursor: pointer;
 }
+
+.show:focus {
+	outline: none;
+}
 .calendar {
 		width: 385px;
 		height: 415px;

@@ -11,6 +11,7 @@ nowTimes=document.getElementsByClassName('now-date')[0],
 clears=document.getElementsByClassName('clear')[0],
 calendars=document.getElementsByClassName('calendar')[0],
 layouts=document.getElementsByClassName('layout')[0];
+
 yearPre.onclick=function(){
 	playYearPre();
 }
@@ -23,6 +24,7 @@ yearNext.onclick=function(){
 monthNext.onclick=function(){
 	playMonthNext();
 }
+
 var nowDate=new Date();
 var nowMonth=nowDate.getMonth()+1;
 var nowYear=nowDate.getFullYear();
@@ -68,6 +70,7 @@ function playDate(year,month){
 	}
 	}
 }
+
 function nowTime(){
 	playDate(nowYear,nowMonth-1);
 	dayList[nowWeek+nowDay].style.backgroundColor='#0099ff';
@@ -152,19 +155,18 @@ nowTimes.onclick=function(){
 clears.onclick=function(){
 	shows.value='';
 }
-var c;
-c=0;
-	layouts.style.opacity=
-'0';
+ var c;
+ c=0;
+	layouts.style.display=
+'none';
 	shows.onclick=function(){
-	
 	nowTime();
 	shows.value='';
 	c++;
 	if(c%2===0){
-		layouts.style.opacity='0';
+		layouts.style.display='none';
 	}else {
-		layouts.style.opacity='1';
+		layouts.style.display='block';
 	}
 }
 

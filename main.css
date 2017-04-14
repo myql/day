@@ -2,7 +2,7 @@
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-		cursor: pointer;
+
 	}
 li {
 		list-style: none;
@@ -10,6 +10,7 @@ li {
 #container {
 	width: 500px;
 	margin: 20px auto;
+	cursor: pointer;
 }
 .calendar {
 		width: 385px;

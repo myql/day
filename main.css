@@ -9,7 +9,7 @@ li {
 	}
 #container {
 	width: 500px;
-	margin: 0 auto;
+	margin: 20px auto;
 }
 .calendar {
 		width: 385px;
@@ -38,16 +38,18 @@ li {
 	height: 50px;
 	margin-right: 5px;
 	margin-bottom: 5px;
-	background: #999;
+	background: #ccc;
 	text-align: center;
 	font: 16px/50px "Microsoft Yahei",sans-serif;
 }
-.calendar li:hover {
+.dayr li:hover {
 	background: #0099ff;
 }
+
 .week  li {
 	background: #ffbb00;
 }
+
 .operation {
 	font-size: 0;
 }

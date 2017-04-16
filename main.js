@@ -30,7 +30,6 @@ var nowMonth=nowDate.getMonth()+1;
 var nowYear=nowDate.getFullYear();
 var nowWeek=nowDate.getDay();
 var nowDay=nowDate.getDate();
-
 function playDate(year,month){
 	var setDate=new Date();
 	setDate.setFullYear(year);
@@ -65,7 +64,7 @@ function playDate(year,month){
 		var clickDay=parseInt(this.innerHTML);
 		shows.value=clickYear+'-'+clickMonth+'-'+clickDay;
 	}
-	
+	dayList[setWeek+nowDay-1].style.backgroundColor='#0099ff';
 	j++;	
 	}
 	}
@@ -73,7 +72,6 @@ function playDate(year,month){
 
 function nowTime(){
 	playDate(nowYear,nowMonth-1);
-	dayList[nowWeek+nowDay].style.backgroundColor='#0099ff';
 	dayList[nowWeek+nowDay].onmouseout=function(){
 			this.style.backgroundColor= '#0099ff';
 		}

@@ -42,15 +42,30 @@ function playDate(year,month){
 	yearNumber.innerHTML=parseInt(year);
 	setDays(year);
 	var num=setMonthDays[setDate.getMonth()];
-	for(i=0;i<42;i++){
+	for(i=0;i<setWeek;i++){
 		dayList[i].innerHTML='';
 		dayList[i].style.backgroundColor= '#ccc';
+		dayList[i].onmouseover=function(){
+		this.style.backgroundColor= '#ccc';
+		}
+		dayList[i].onmouseout=function(){
+			this.style.backgroundColor= '#ccc';
+		}	
 		
 	}
+for(i=(setWeek+num);i<42;i++){
+	dayList[i].innerHTML='';
+	dayList[i].style.backgroundColor= '#ccc';
+		dayList[i].onmouseover=function(){
+		this.style.backgroundColor= '#ccc';
+		}
+		dayList[i].onmouseout=function(){
+			this.style.backgroundColor= '#ccc';
+		}
+}
 	for(i=setWeek;i<(setWeek+num);i++){
 	if(j<=num){
 		dayList[i].innerHTML=j;
-		
 		dayList[i].style.backgroundColor= '#999';
 		dayList[i].onmouseover=function(){
 		this.style.backgroundColor= '#0099ff';
@@ -65,6 +80,9 @@ function playDate(year,month){
 		shows.value=clickYear+'-'+clickMonth+'-'+clickDay;
 	}
 	dayList[setWeek+nowDay-1].style.backgroundColor='#0099ff';
+	dayList[setWeek+nowDay-1].onmouseout=function(){
+			this.style.backgroundColor= '#0099ff';
+		}
 	j++;	
 	}
 	}
@@ -72,9 +90,7 @@ function playDate(year,month){
 
 function nowTime(){
 	playDate(nowYear,nowMonth-1);
-	dayList[nowWeek+nowDay].onmouseout=function(){
-			this.style.backgroundColor= '#0099ff';
-		}
+	
 		shows.value=nowYear+'-'+nowMonth+'-'+nowDay;
 }
 

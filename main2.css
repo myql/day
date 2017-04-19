@@ -1,0 +1,79 @@
+* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		-webkit-user-select:none;
+		-moz-user-select:none;
+		-o-user-select:none;
+		user-select:none;
+	}
+li {
+		list-style: none;
+	}
+#container {
+	width: 500px;
+	margin: 20px auto;
+	cursor: pointer;
+}
+
+.show:focus {
+	outline: none;
+}
+.calendar {
+		width: 385px;
+		height: 415px;
+		margin: 20px auto;
+}
+.calendar h4 {
+	font-size: 0;
+}
+.calendar  .year-btn, .calendar  .month-btn{
+	display: inline-block;
+	width: 60px;
+	text-align: center;
+	font: 16px/30px "Microsoft Yahei",sans-serif;
+	color: #666;
+}
+.calendar  .month, .calendar  .year{
+	display: inline-block;
+	width: 70px;
+	text-align: center;
+	font: 16px/30px "Microsoft Yahei",sans-serif
+}
+.calendar li {
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	background: #ccc;
+	text-align: center;
+	font: 16px/50px "Microsoft Yahei",sans-serif;
+}
+.day li.active:hover {
+	background: #0099ff;
+}
+.day li.inactive:hover {
+	background: #ccc;
+}
+.week  li {
+	background: #ffbb00;
+}
+
+.operation {
+	font-size: 0;
+}
+.operation>span {
+	display: inline-block;
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	border-radius: 4px;
+	text-align: center;
+	background: #00ffcc;
+	margin-left: 10px;
+}
+.operation>span:hover {
+	opacity: 0.8;
+}

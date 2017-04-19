@@ -45,6 +45,9 @@ function playDate(year,month){
 	for(i=0;i<setWeek;i++){
 		dayList[i].innerHTML='';
 		dayList[i].style.backgroundColor= '#ccc';
+		dayList[i].onclick=function(){
+			shows.value='';
+		}
 		dayList[i].onmouseover=function(){
 		this.style.backgroundColor= '#ccc';
 		}
@@ -55,6 +58,9 @@ function playDate(year,month){
 	}
 for(i=(setWeek+num);i<42;i++){
 	dayList[i].innerHTML='';
+		dayList[i].onclick=function(){
+			shows.value='';
+		}
 	dayList[i].style.backgroundColor= '#ccc';
 		dayList[i].onmouseover=function(){
 		this.style.backgroundColor= '#ccc';
